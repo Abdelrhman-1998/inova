@@ -1,0 +1,33 @@
+<nav class="navbar navbar-expand-lg navbar-light pe-lg-5">
+    <div class="container-fluid">
+        <a href="">
+            <img src="../../../assets/download.png" alt="">
+        </a>
+      <button class="navbar-toggler" type="button" (click)="toggleNav()">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse  " [ngClass]="{'show':openNav}" id="navbarSupportedContent ">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0  text-center text-lg-start  ps-0 ps-lg-4">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">hot deals</a>
+          </li>
+        </ul>
+        <div class="d-flex flex-column flex-lg-row justify-content-center align-items-center gap-3">
+            <button class="btn language">
+                {{language}}
+            </button>
+            <div class="d-flex gap-2">
+                <button class="btn signIn">
+                    sign in
+                </button>
+                <button class="btn btn-danger signUp">
+                    sign up
+                </button>
+            </div>
+        </div>
+      </div>
+    </div>
+  </nav>

@@ -1,0 +1,22 @@
+nav{
+    background:white;
+    *{
+        text-transform: uppercase;
+    }
+    a{
+        color: #5614cf;
+        &.active{
+            color: #5614cf;
+            font-weight: bold; 
+        }
+    }
+    button{
+        &.language{
+            color: #5614cf;
+        }
+ 
+    }
+    .signIn{
+        color: red;
+    }
+}

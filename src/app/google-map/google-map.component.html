@@ -1,0 +1,37 @@
+<div class="map">
+    <form class="search d-flex flex-wrap">
+        <div class="d-flex flex-wrap  align-items-center">
+            <input  placeholder="Search by gym name ,facilites" type="text" name="search" id="search">
+            <button type="button" class="btn btn-danger ">
+                find gyms
+            </button>
+        </div>
+
+        <button (click)="toggleListView()" type="button" class="btn btn-primary">
+            switch list view
+        </button>
+    </form>
+    <div class="listview d-flex pt-3 w-100" *ngIf="listView">
+        <ul class="d-flex gap-3 flex-wrap ">
+            
+            <li class="listCard " *ngFor="let item of data | paginate: { itemsPerPage: 10, currentPage: p }">
+                <div class="cardImage">
+                    <img [src]="item.logo_img_url" alt="">
+                </div>
+                <div class="card-body">
+                    <p>
+                        {{item.name}}
+                    </p>
+                </div>
+                <div class="card-footer  text-center">
+                    <p>
+                        {{item.description}}
+                    </p>
+                </div>
+            </li>
+        </ul>
+        
+     
+    </div>
+    <pagination-controls *ngIf="listView" (pageChange)="p = $event"></pagination-controls>
+</div>
